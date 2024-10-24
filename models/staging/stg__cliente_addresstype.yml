@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+    - name: fonte_aw
+      description: Sistema de dados de venda da AW
+      database: FEA24_9
+      schema: RAW_ADVENTURE_WORKS
+      tables:
+        - name: AddressType
+          description: Tabela que liga a PK_TIPO_ENDERECO com os nomes dos tipos de endereço.
