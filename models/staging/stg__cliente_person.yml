@@ -1,0 +1,15 @@
+version: 2
+
+
+sources:
+    - name: fonte_aw
+      description: Sistema de dados de venda da AW
+      database: FEA24_9
+      schema: RAW_ADVENTURE_WORKS
+      tables:
+        - name: person
+          description: Tabela com informações de funcionários e clientes da AW.
+          columns:
+            - name: BUSINESSENTITYID
+              data_tests:
+                - not_null
