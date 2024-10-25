@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+    - name: fonte_aw
+      description: Sistema de dados de venda da AW
+      database: FEA24_9
+      schema: RAW_ADVENTURE_WORKS
+      tables:
+        - name: Employee
+          description: Tabela com informações pessoais dos funcionários como data de nascimento, cargo, gênero, etc.

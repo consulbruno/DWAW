@@ -1,0 +1,40 @@
+version: 2
+
+
+models:
+  - name: int_funcionario_preparacao
+    description: Tabela que une a chave primária do funcionario e a chave estrangeira do endereço com os diferentes tipos de endereço.
+
+    columns:
+      - name: PK_FUNCIONARIO
+        description: Chave primária do funcionário.
+
+      - name: NOME_CLIENTE 
+        description: Nome completo do funcionário.
+
+      - name: DT_NASCIMENTO_FUNCIONARIO 
+        description: Data de nascimento do funcionário.
+
+      - name: GENERO_FUNCIONARIO
+        description: Gênero do funcionário.
+
+      - name: LOGIN_FUNCIONARIO
+        description: Login do funcionário.
+
+      - name: CARGO_FUNCIONARIO
+        description: Cargo do funcionário.
+
+      - name: DT_CONTRATACAO_FUNCIONARIO
+        description: Data de contratação do funcionário.
+      
+      - name: DEPTO_FUNCIONARIO
+        description: Departamento onde trabalha o funcionário.
+
+      - name: GRUPO_DEPTO
+        description: Grupo do respectivo departamento.
+
+      - name: DT_ALTERACAO
+        description: Data da última alteração nos dados do funcionário.
+
+ 
+
