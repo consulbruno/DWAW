@@ -1,0 +1,21 @@
+version: 2
+
+
+models:
+  - name: int_produto_categoria
+    description: Tabela que une as informações das categorias com subcategorias dos produtos.
+
+    columns:
+
+      - name: PK_SUBTIPO_PRODUTO
+        description: Chave primária do subtipo do produto.
+
+      - name: TIPO_PRODUTO
+        description: Categoria / tipo do produto.
+
+      - name: SUBTIPO_PRODUTO
+        description: Subcategoria / subtipo do produto.
+
+
+ 
+

@@ -1,0 +1,35 @@
+version: 2
+
+
+models:
+  - name: int_produto_preparacao
+    description: Tabela que une as informações dos produtos com os tipos de categoria, subcategoria e modelos.
+
+    columns:
+      - name: PK_PRODUTO
+        description: Chave primária do produto.
+
+      - name: NOME_PRODUTO
+        description: Nome do produto.
+
+      - name: COR_PRODUTO
+        description: Cor do produto.
+
+      - name: TIPO_PRODUTO
+        description: Tipo / categoria do produto.
+
+      - name: SUBTIPO_PRODUTO
+        description: Subtipo / subcategoria do produto.
+
+      - name: MODELO_PRODUTO
+        description: Modelo do produto.
+
+      - name: VALOR_UNITARIO
+        description: Valor unitário padrão do produto.
+
+      - name: DT_ALTERACAO
+        description: Data da última alteração das informações do produto.
+
+
+ 
+
