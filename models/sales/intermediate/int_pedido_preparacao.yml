@@ -1,0 +1,57 @@
+version: 2
+
+
+models:
+  - name: int_pedido_preparacao
+    description: Tabela fato com todas as informações relevantes dos pedidos.
+
+    columns:
+      - name: PK_PEDIDO
+        description: Chave primária do pedido.
+
+      - name: FK_CLIENTE
+        description: Chave estrangeira do cliente.
+
+      - name: FK_PRODUTO
+        description: Chave estrangeira do produto.
+
+      - name: FK_FUNCIONARIO
+        description: Chave estrangeira do funcionário.
+
+      - name: DT_PEDIDO
+        description: Data em que o pedido foi feito.
+
+      - name: CIDADE_DESTINATARIO
+        description: Cidade do destinatário.
+
+      - name: ESTADO_DESTINATARIO
+        description: Estado do destinatário.
+
+      - name: PAIS_DESTINATARIO
+        description: País do destinatário.
+
+      - name: QUANTIDADE
+        description: Quantidade do produto em questão.
+
+      - name: VALOR_UNITARIO
+        description: Valor unitário do produto, com descontos de ofertas especiais aplicados.
+
+      - name: VALOR_TOTAL
+        description: Valor total do pedido, menos frete.
+
+      - name: TIPO_PEDIDO
+        description: Diz se o pedido foi feito online ou na loja.
+
+      - name: MOTIVO_PEDIDO
+        description: Motivo do cliente ter realizado a compra (se foi por uma promoção, por ex).
+
+      - name: STATUS
+        description: Status do pedido.
+
+      - name: DT_ALTERACAO
+        description: Data da última alteração do status do pedido.
+
+
+
+ 
+

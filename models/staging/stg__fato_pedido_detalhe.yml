@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+    - name: fonte_aw
+      description: Sistema de dados de venda da AW
+      database: FEA24_9
+      schema: RAW_ADVENTURE_WORKS
+      tables:
+        - name: SalesOrderDetail
+          description: Tabela com as informações detalhadas dos pedidos de compra.
