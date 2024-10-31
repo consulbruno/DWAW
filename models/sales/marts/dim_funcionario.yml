@@ -8,6 +8,9 @@ models:
     columns:
       - name: PK_FUNCIONARIO
         description: Chave primária do funcionário.
+        data_tests:
+          - not_null
+          - unique
 
       - name: NOME_CLIENTE 
         description: Nome completo do funcionário.

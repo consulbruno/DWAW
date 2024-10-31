@@ -9,3 +9,7 @@ sources:
       tables:
         - name: EmployeeDepartmentHistory
           description: Tabela que liga a PK do funcionario a FK do departamento.
+          columns:
+            - name: BusinessEntityID
+              data_tests:
+                - not_null

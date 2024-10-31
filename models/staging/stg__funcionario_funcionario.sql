@@ -19,9 +19,15 @@ with
  --          , cast (SICKLEAVEHOURS as varchar) as
  --          , cast (CURRENTFLAG as varchar) as
  --          , cast (ROWGUID as varchar) as
-             , cast (MODIFIEDDATE as varchar) as DT_ALTERACAO
+             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
  --          , cast (ORGANIZATIONNODE as varchar) as 
         from fonte_funcionario
+        group by BUSINESSENTITYID
+               , LOGINID
+               , JOBTITLE
+               , BIRTHDATE 
+               , GENDER
+               , HIREDATE
     )
 
 select *

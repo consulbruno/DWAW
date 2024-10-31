@@ -1,10 +1,5 @@
 with
-    person as (
-        select *
-        from {{ ref('stg__cliente_person') }}
-    )
-
-    , stateprovince as (
+    stateprovince as (
         select *
         from {{ ref('stg__cliente_stateprovince') }}
     )
