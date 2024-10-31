@@ -9,3 +9,8 @@ sources:
       tables:
         - name: Employee
           description: Tabela com informações pessoais dos funcionários como data de nascimento, cargo, gênero, etc.
+          columns:
+            - name: BusinessEntityID
+              data_tests:
+              - unique
+              - not_null

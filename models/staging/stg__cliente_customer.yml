@@ -9,3 +9,11 @@ sources:
       tables:
         - name: Customer
           description: Tabela que liga a PK do cliente à FK de pessoas.
+          columns:
+            - name: CustomerID
+              data_tests:
+                - unique
+              
+            - name: PersonID
+              data_tests:
+                - unique

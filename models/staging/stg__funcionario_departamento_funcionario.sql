@@ -10,9 +10,10 @@ with
              , cast (DEPARTMENTID as int) as FK_DEPTO
 --           , cast (SHIFTID as int) as
 --           , cast (STARTDATE as date) as
---           , cast (ENDDATE as date) as
-             , cast (MODIFIEDDATE as date) as DT_ALTERACAO
+             , cast (ENDDATE as date) as DT_FINAL
+ --          , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
         from departamento_funcionario
+        where ENDDATE is null
     )
 
 select *

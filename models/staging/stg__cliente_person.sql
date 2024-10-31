@@ -6,8 +6,8 @@ with
 
 
     , renomeacao as (
-        select cast (BUSINESSENTITYID as int) as PK_CLIENTE
-             , cast (PERSONTYPE as varchar) as TIPO_PESSOA
+        select cast (BUSINESSENTITYID as int) as PK_PESSOA
+ --          , cast (PERSONTYPE as varchar) as TIPO_PESSOA
  --          , cast (NAMESTYLE as varchar) as 
  --          , cast (TITLE as
              , cast (FIRSTNAME || ' ' || LASTNAME as varchar) as NOME_CLIENTE

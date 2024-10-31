@@ -2,26 +2,14 @@ version: 2
 
 models:
   - name: dim_cliente
-    description: Tabela que une informações pessoais do cliente com as dos endereços cadastrados.
+    description: Tabela que une informações pessoais do cliente.
 
     columns:
     - name: PK_CLIENTE
       description: Chave primária do cliente.
+      data_tests:
+        - unique
+        - not_null
 
     - name: NOME_CLIENTE
       description: Nome completo do cliente.
-
-    - name: CIDADE_CLIENTE
-      description: Cidade do cliente.
-
-    - name: ESTADO_CLIENTE
-      description: Estado do cliente.
-
-    - name: PAIS_CLIENTE
-      description: País do cliente.
-
-    - name: TIPO_ENDERECO
-      description: Descritivo do tipo de endereço do cliente.
-
-    - name: DT_ALTERACAO
-      description: Data da última alteração do endereço do cliente.
