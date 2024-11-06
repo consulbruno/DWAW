@@ -39,6 +39,9 @@ models:
       - name: VALOR_TOTAL
         description: Valor total do pedido, menos frete.
 
+      - name: TIPO_CARTAO
+        description: Tipo de cartão utilizado para o pagamento do pedido.
+
       - name: TIPO_PEDIDO
         description: Diz se o pedido foi feito online ou na loja.
 

@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+    - name: fonte_aw
+      description: Sistema de dados de venda da AW
+      database: FEA24_9
+      schema: RAW_ADVENTURE_WORKS
+      tables:
+        - name: CreditCard
+          description: Tabela com as informações dos cartões utilizados para pagamento nos pedidos da AW.
