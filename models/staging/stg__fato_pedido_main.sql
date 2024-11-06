@@ -21,7 +21,7 @@ with
 --           , cast (BILLTOADDRESSID as varchar) as
              , cast (SHIPTOADDRESSID as int) as FK_ENDERECO_ENTREGA
 --           , cast (SHIPMETHODID as varchar) as
---           , cast (CREDITCARDID as varchar) as
+             , cast (CREDITCARDID as int) as FK_CARTAO
 --           , cast (CREDITCARDAPPROVALCODE as varchar) as
 --           , cast (CURRENCYRATEID as varchar) as
              , cast (SUBTOTAL as float) as SUB_TOTAL
