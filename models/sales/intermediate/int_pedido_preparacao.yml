@@ -18,18 +18,12 @@ models:
       - name: FK_FUNCIONARIO
         description: Chave estrangeira do funcionário.
 
+      - name: FK_ENDERECO
+        description: Chave estrangeira do endereço de entrega.
+
       - name: DT_PEDIDO
         description: Data em que o pedido foi feito.
-
-      - name: CIDADE_DESTINATARIO
-        description: Cidade do destinatário.
-
-      - name: ESTADO_DESTINATARIO
-        description: Estado do destinatário.
-
-      - name: PAIS_DESTINATARIO
-        description: País do destinatário.
-
+        
       - name: QUANTIDADE
         description: Quantidade do produto em questão.
 

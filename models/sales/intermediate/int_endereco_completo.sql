@@ -1,25 +1,23 @@
 with
-    endereco_preparacao as (
+    address as (
+        select *
+        from {{ ref('stg__cliente_address') }}
+    )
+
+    , endereco_preparacao as (
         select *
         from {{ ref('int_endereco_preparacao') }}
     )
 
-    , tipo_endereco as (
-        select *
-        from {{ ref('int_endereco_tipo_endereco') }}
-    )
-
-    , endereco as (
-        select tipo_endereco.PK_CLIENTE
-             , endereco_preparacao.PK_ENDERECO
-             , endereco_preparacao.NOME_CIDADE
+    , endereco_completo as (
+        select address.PK_ENDERECO
+             , address.NOME_CIDADE
              , endereco_preparacao.NOME_ESTADO
              , endereco_preparacao.NOME_PAIS
-             , tipo_endereco.TIPO_ENDERECO
-             , endereco_preparacao.DT_ALTERACAO
-        from endereco_preparacao
-        left join tipo_endereco on endereco_preparacao.PK_ENDERECO = tipo_endereco.FK_ENDERECO
+             , address.DT_ALTERACAO
+        from address
+        left join endereco_preparacao on address.FK_ESTADO = endereco_preparacao.PK_ESTADO
     )
 
     select *
-    from endereco
+    from endereco_completo

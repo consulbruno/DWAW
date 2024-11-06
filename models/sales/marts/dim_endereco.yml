@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_endereco
+    description: Tabela que une as informações dos endereços.
+
+    columns:
+    - name: PK_ENDERECO
+      description: Chave primária do endereço.
+      data_tests:
+        - not_null
+        - unique
+
+    - name: NOME_CIDADE
+      description: Nome da cidade do endereço.
+
+    - name: NOME_ESTADO
+      description: Nome do estado do endereço.
+
+    - name: NOME_PAIS
+      description: Nome do país do endereço.
+
+    - name: DT_ALTERACAO
+      description: Data da última alteração.

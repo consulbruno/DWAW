@@ -8,8 +8,10 @@ with
     , renomeacao as (
         select cast (COUNTRYREGIONCODE as varchar) as COD_PAIS
              , cast (NAME as varchar) as NOME_PAIS
- --          , cast (MODIFIEDDATE as varchar) as
+             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
         from fonte_countryregion
+        group by COUNTRYREGIONCODE
+               , NAME
     )
 
 select *
