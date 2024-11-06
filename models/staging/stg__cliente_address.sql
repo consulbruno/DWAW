@@ -10,12 +10,15 @@ with
  --         ,  cast (ADDRESSLINE1 as varchar) as 
  --         ,  cast (ADDRESSLINE2 as varchar) as 
             ,  cast (CITY as varchar) as NOME_CIDADE
-            ,  cast (STATEPROVINCEID as int) as FK_ESTADO_EUA
+            ,  cast (STATEPROVINCEID as int) as FK_ESTADO
  --         ,  cast (POSTALCODE as varchar) as 
  --         ,  cast (SPATIALLOCATION as varchar) as 
  --         ,  cast (ROWGUID as varchar) as
-            ,  cast (MODIFIEDDATE as date) as DT_ALTERACAO
+            ,  cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
         from fonte_address
+        group by ADDRESSID
+               , CITY
+               , STATEPROVINCEID
     )
 
 

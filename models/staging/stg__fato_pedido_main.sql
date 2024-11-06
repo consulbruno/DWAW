@@ -19,7 +19,7 @@ with
              , cast (SALESPERSONID as int) as FK_FUNCIONARIO
 --           , cast (TERRITORYID as varchar) as
 --           , cast (BILLTOADDRESSID as varchar) as
-             , cast (SHIPTOADDRESSID as int) as FK_ENDERECO_ENTREGA
+             , cast (SHIPTOADDRESSID as int) as FK_ENDERECO
 --           , cast (SHIPMETHODID as varchar) as
              , cast (CREDITCARDID as int) as FK_CARTAO
 --           , cast (CREDITCARDAPPROVALCODE as varchar) as

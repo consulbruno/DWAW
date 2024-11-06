@@ -3,26 +3,20 @@ version: 2
 
 models:
   - name: int_endereco_completo
-    description: Tabela que une a chave primária do cliente com a chave primária do endereço e as demais informações referentes ao endereço.
+    description: Tabela que une a chave primária do endereço com a cidade, estado, pais e data da última alteração do endereço do cliente.
 
     columns:
-    - name: PK_CLIENTE
-      description: Chave primária do cliente.
-
     - name: PK_ENDERECO
-      description: Chave primária do endereço.
+      description: Chave primária dos endereços.
 
     - name: NOME_CIDADE
-      description: Cidade do cliente.
+      description: Nome da cidade do cliente.
 
     - name: NOME_ESTADO
-      description: Estado do cliente.
+      description: Nome do estado do cliente.
 
     - name: NOME_PAIS
-      description: Pais do cliente.
-
-    - name: TIPO_ENDERECO
-      description: Descritivo do tipo de endereço do cliente.
+      description: Nome do país do cliente.
 
     - name: DT_ALTERACAO
       description: Data da última alteração no endereço do cliente.

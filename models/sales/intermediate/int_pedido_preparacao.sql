@@ -14,14 +14,14 @@ with
         from {{ ref('stg__fato_pedido_detalhe') }}
     )
 
-    , endereco as (
-        select *
-        from {{ ref('int_endereco_completo') }}
-    )
-
     , cartao as (
         select *
         from {{ ref('stg__fato_pedido_cartao') }}
+    )
+
+    , endereco as (
+        select *
+        from {{ ref('int_endereco_completo') }}
     )
 
     , pedido_completo as (
@@ -29,10 +29,8 @@ with
              , pedido.FK_CLIENTE
              , pedido_desc.FK_PRODUTO
              , pedido.FK_FUNCIONARIO
+             , pedido.FK_ENDERECO
              , pedido.DT_PEDIDO
-             , endereco.NOME_CIDADE as CIDADE_DESTINATARIO
-             , endereco.NOME_ESTADO as ESTADO_DESTINATARIO
-             , endereco.NOME_PAIS as PAIS_DESTINATARIO
              , pedido_desc.QUANTIDADE
              , CAST ((pedido_desc.VALOR_UNITARIO - pedido_desc.DESCONTO_UNITARIO) as float) as VALOR_UNITARIO
              , CAST ((pedido.SUB_TOTAL) as float) as VALOR_TOTAL
@@ -42,7 +40,6 @@ with
              , CAST ((CASE WHEN pedido.STATUS = 1 THEN 'In process' WHEN pedido.STATUS = 2 THEN 'Approved' WHEN pedido.STATUS = 3 THEN 'Backordered' WHEN pedido.STATUS = 4 THEN 'Rejected' WHEN pedido.STATUS = 5 THEN 'Shipped' WHEN pedido.STATUS = 6 THEN 'Cancelled' END) as varchar) as STATUS
              , pedido.DT_ALTERACAO
         from pedido
-        left join endereco on pedido.FK_ENDERECO_ENTREGA = endereco.PK_ENDERECO
         left join pedido_desc on pedido.PK_PEDIDO = pedido_desc.FK_PEDIDO
         left join motivo on pedido.PK_PEDIDO = motivo.FK_PEDIDO
         left join cartao on pedido.FK_CARTAO = cartao.PK_CARTAO
