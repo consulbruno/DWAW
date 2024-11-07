@@ -11,6 +11,7 @@ with
              , QUANTIDADE
              , VALOR_UNITARIO
              , DESCONTO_UNITARIO
+             , DT_ALTERACAO
         from pedido_desc
     )
 

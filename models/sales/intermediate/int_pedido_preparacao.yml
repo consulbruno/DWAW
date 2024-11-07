@@ -8,6 +8,9 @@ models:
     columns:
       - name: PK_PEDIDO
         description: Chave primária do pedido.
+        data_tests:
+          - not_null
+          - unique
 
       - name: FK_CLIENTE
         description: Chave estrangeira do cliente.
@@ -38,9 +41,6 @@ models:
 
       - name: TIPO_PEDIDO
         description: Diz se o pedido foi feito online ou na loja.
-
-      - name: MOTIVO_PEDIDO
-        description: Motivo do cliente ter realizado a compra (se foi por uma promoção, por ex).
 
       - name: STATUS
         description: Status do pedido.

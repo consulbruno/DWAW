@@ -24,7 +24,7 @@ with
              , cast (employee.DT_CONTRATACAO_FUNCIONARIO as date) as DT_CONTRATACAO_FUNCIONARIO
              , cast (departamento.NOME_DEPTO as varchar) as DEPTO_FUNCIONARIO
              , cast (departamento.GRUPO_DEPTO as varchar) as GRUPO_DEPTO
---           , cast (employee.DT_ALTERACAO as date) as DT_ALTERACAO
+             , cast (employee.DT_ALTERACAO as date) as DT_ALTERACAO
         from employee
         left join person on employee.PK_FUNCIONARIO = person.PK_PESSOA
         left join departamento on employee.PK_FUNCIONARIO = departamento.PK_FUNCIONARIO

@@ -1,8 +1,9 @@
 version: 2
 
+
 models:
   - name: dim_cliente
-    description: Tabela que une informações pessoais do cliente.
+    description: Tabela com as informações pessoais do cliente.
 
     columns:
     - name: PK_CLIENTE
@@ -13,3 +14,6 @@ models:
 
     - name: NOME_CLIENTE
       description: Nome completo do cliente.
+
+    - name: DT_ALTERACAO
+      description: Data da última alteração dos dados do cliente.
