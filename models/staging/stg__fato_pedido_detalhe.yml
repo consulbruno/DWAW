@@ -9,3 +9,16 @@ sources:
       tables:
         - name: SalesOrderDetail
           description: Tabela com as informações detalhadas dos pedidos de compra.
+
+          columns:
+            - name: SalesOrderID
+              data_tests:
+                - not_null
+
+            - name: SalesOrderDetailID
+              data_tests:
+                - not_null
+
+            - name: ProductID
+              data_tests:
+                - not_null

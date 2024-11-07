@@ -14,7 +14,7 @@ with
              , cast (COLOR as varchar) as COR_PRODUTO
 --           , cast (SAFETYSTOCKLEVEL as varchar) as
 --           , cast (REORDERPOINT as varchar) as
-             , cast (STANDARDCOST as varchar) as VALOR_UNITARIO
+             , cast (STANDARDCOST as varchar) as VALOR_PADRAO
 --           , cast (LISTPRICE as varchar) as
 --           , cast (SIZE as varchar) as
 --           , cast (SIZEUNITMEASURECODE as varchar) as

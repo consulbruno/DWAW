@@ -24,7 +24,7 @@ models:
       - name: MODELO_PRODUTO
         description: Modelo do produto.
 
-      - name: VALOR_UNITARIO
+      - name: VALOR_PADRAO
         description: Valor unitário padrão do produto.
 
       - name: DT_ALTERACAO
