@@ -9,41 +9,30 @@ with
         from {{ ref('stg__fato_pedido_main') }}
     )
 
-    , pedido_desc as (
-        select *
-        from {{ ref('stg__fato_pedido_detalhe') }}
-    )
-
     , cartao as (
         select *
         from {{ ref('stg__fato_pedido_cartao') }}
     )
 
-    , endereco as (
-        select *
-        from {{ ref('int_endereco_completo') }}
-    )
-
-    , pedido_completo as (
+    , pedido_preparacao as (
         select pedido.PK_PEDIDO
              , pedido.FK_CLIENTE
-             , pedido_desc.FK_PRODUTO
              , pedido.FK_FUNCIONARIO
              , pedido.FK_ENDERECO
              , pedido.DT_PEDIDO
-             , pedido_desc.QUANTIDADE
-             , CAST ((pedido_desc.VALOR_UNITARIO - pedido_desc.DESCONTO_UNITARIO) as float) as VALOR_UNITARIO
-             , CAST ((pedido.SUB_TOTAL) as float) as VALOR_TOTAL
+             , CAST ((pedido.SUBTOTAL) as float) as SUBTOTAL
+             , pedido.TAXA
+             , pedido.FRETE
+             , pedido.VALOR_TOTAL
              , cartao.TIPO_CARTAO as TIPO_CARTAO
              , CAST ((CASE WHEN pedido.TIPO_VENDA = 'TRUE' THEN 'ONLINE' ELSE 'LOJA' END) as varchar) as TIPO_PEDIDO
              , motivo.MOTIVO_PEDIDO
              , CAST ((CASE WHEN pedido.STATUS = 1 THEN 'In process' WHEN pedido.STATUS = 2 THEN 'Approved' WHEN pedido.STATUS = 3 THEN 'Backordered' WHEN pedido.STATUS = 4 THEN 'Rejected' WHEN pedido.STATUS = 5 THEN 'Shipped' WHEN pedido.STATUS = 6 THEN 'Cancelled' END) as varchar) as STATUS
              , pedido.DT_ALTERACAO
         from pedido
-        left join pedido_desc on pedido.PK_PEDIDO = pedido_desc.FK_PEDIDO
         left join motivo on pedido.PK_PEDIDO = motivo.FK_PEDIDO
         left join cartao on pedido.FK_CARTAO = cartao.PK_CARTAO
     )
 
     select *
-    from pedido_completo
+    from pedido_preparacao

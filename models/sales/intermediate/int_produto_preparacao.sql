@@ -21,7 +21,7 @@ with
              , categoria.TIPO_PRODUTO
              , categoria.SUBTIPO_PRODUTO
              , modelo.MODELO_PRODUTO
-             , produto.VALOR_UNITARIO
+             , produto.VALOR_PADRAO
              , produto.DT_ALTERACAO
         from produto
         left join categoria on produto.FK_SUBTIPO_PRODUTO = categoria.PK_SUBTIPO_PRODUTO

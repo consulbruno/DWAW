@@ -12,9 +12,6 @@ models:
       - name: FK_CLIENTE
         description: Chave estrangeira do cliente.
 
-      - name: FK_PRODUTO
-        description: Chave estrangeira do produto.
-
       - name: FK_FUNCIONARIO
         description: Chave estrangeira do funcionário.
 
@@ -23,12 +20,15 @@ models:
 
       - name: DT_PEDIDO
         description: Data em que o pedido foi feito.
-        
-      - name: QUANTIDADE
-        description: Quantidade do produto em questão.
 
-      - name: VALOR_UNITARIO
-        description: Valor unitário do produto, com descontos de ofertas especiais aplicados.
+      - name: SUBTOTAL
+        description: Subtotal do pedido.
+
+      - name: TAXA
+        description: Taxa do pedido.
+      
+      - name: FRETE
+        description: Frete do pedido.
 
       - name: VALOR_TOTAL
         description: Valor total do pedido, menos frete.

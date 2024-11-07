@@ -24,7 +24,7 @@ with
              , cast (CREDITCARDID as int) as FK_CARTAO
 --           , cast (CREDITCARDAPPROVALCODE as varchar) as
 --           , cast (CURRENCYRATEID as varchar) as
-             , cast (SUBTOTAL as float) as SUB_TOTAL
+             , cast (SUBTOTAL as float) as SUBTOTAL
              , cast (TAXAMT as float) as TAXA
              , cast (FREIGHT as float) as FRETE
              , cast (TOTALDUE as float) as VALOR_TOTAL
