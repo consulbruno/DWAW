@@ -23,3 +23,6 @@ models:
 
       - name: DESCONTO_UNITARIO
         description: Desconto do produto neste pedido.
+
+      - name: DT_ALTERACAO
+        description: Data da última alteração dos detalhes do pedido.
