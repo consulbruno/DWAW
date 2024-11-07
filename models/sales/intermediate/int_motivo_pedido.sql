@@ -11,12 +11,12 @@ with
 
     , pedido_motivo as (
         select motivo_join.FK_PEDIDO
+             , motivo.PK_MOTIVO_PEDIDO
              , motivo.MOTIVO_PEDIDO
-             , max (motivo.DT_ALTERACAO)
+             , motivo.TIPO_MOTIVO
+             , motivo_join.DT_ALTERACAO
         from motivo_join
         left join motivo on motivo_join.FK_MOTIVO_PEDIDO = motivo.PK_MOTIVO_PEDIDO
-        group by motivo_join.FK_PEDIDO
-               , motivo.MOTIVO_PEDIDO
     )
 
     select *

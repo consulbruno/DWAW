@@ -1,0 +1,26 @@
+version: 2
+
+
+models:
+  - name: int_motivo_pedido
+    description: Tabela que une a chave estrangeira do pedido com o "motivo" do pedido.
+
+    columns:
+      - name: FK_PEDIDO
+        description: Chave estrangeira do pedido.
+
+      - name: PK_MOTIVO_PEDIDO
+        description: Chave primária do motivo do pedido.
+
+      - name: MOTIVO_PEDIDO
+        description: Descritivo do motivo do pedido.
+
+      - name: TIPO_MOTIVO
+        description: Tipo do motivo do pedido.
+
+      - name: DT_ALTERACAO
+        description: Data da última alteração.
+
+
+ 
+
