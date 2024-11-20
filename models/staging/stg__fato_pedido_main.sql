@@ -30,21 +30,21 @@ with
              , cast (TOTALDUE as float) as VALOR_TOTAL
 --           , cast (COMMENT as varchar) as
 --           , cast (ROWGUID as varchar) as
-             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
+             , cast (MAX (MODIFIEDDATE) as date) as DT_ALTERACAO
         from fonte_pedido_main
         group by SALESORDERID
-               , ORDERDATE
-               , DUEDATE
-               , STATUS
-               , ONLINEORDERFLAG
-               , CUSTOMERID
-               , SALESPERSONID
-               , SHIPTOADDRESSID
-               , CREDITCARDID
-               , SUBTOTAL
-               , TAXAMT
-               , FREIGHT
-               , TOTALDUE
+             , ORDERDATE
+             , DUEDATE
+             , STATUS
+             , ONLINEORDERFLAG
+             , CUSTOMERID
+             , SALESPERSONID
+             , SHIPTOADDRESSID
+             , CREDITCARDID 
+             , SUBTOTAL
+             , TAXAMT 
+             , FREIGHT
+             , TOTALDUE
     )
 
 select *

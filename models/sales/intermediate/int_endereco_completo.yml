@@ -8,6 +8,8 @@ models:
     columns:
     - name: PK_ENDERECO
       description: Chave primária dos endereços.
+      data_tests:
+        - unique
 
     - name: NOME_CIDADE
       description: Nome da cidade do cliente.

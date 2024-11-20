@@ -9,11 +9,8 @@ with
         select cast (SALESREASONID as int) as PK_MOTIVO_PEDIDO
              , cast (NAME as varchar) as MOTIVO_PEDIDO
              , cast (REASONTYPE as varchar) as TIPO_MOTIVO
-             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
+             , cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_pedido_motivo_desc
-        group by SALESREASONID
-               , NAME
-               , REASONTYPE
     )
 
 select *

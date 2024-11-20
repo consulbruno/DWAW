@@ -8,6 +8,8 @@ models:
     columns:
       - name: PK_PRODUTO
         description: Chave primária do produto.
+        data_tests:
+          - unique
 
       - name: NOME_PRODUTO
         description: Nome do produto.

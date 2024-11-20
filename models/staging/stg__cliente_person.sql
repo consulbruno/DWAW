@@ -17,10 +17,8 @@ with
  --          , cast (ADDITIONALCONTACTINFO as varchar) as 
  --          , cast (DEMOGRAPHICS as varchar) as 
  --          , cast (ROWGUID as varchar) as 
-             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
+             , cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_person
-        group by BUSINESSENTITYID
-               , NOME_CLIENTE
     )
 
 

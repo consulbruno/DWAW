@@ -11,10 +11,8 @@ with
 --           , cast (CARDNUMBER as varchar) as
 --           , cast (EXPMONTH as varchar) as
 --           , cast (EXPYEAR as varchar) as
-             , cast (max(MODIFIEDDATE) as date) as DT_ALTERACAO
+             , cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_cartao
-        group by CREDITCARDID
-               , CARDTYPE
     )
 
 select *

@@ -14,11 +14,8 @@ with
  --         ,  cast (POSTALCODE as varchar) as 
  --         ,  cast (SPATIALLOCATION as varchar) as 
  --         ,  cast (ROWGUID as varchar) as
-            ,  cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
+            ,  cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_address
-        group by ADDRESSID
-               , CITY
-               , STATEPROVINCEID
     )
 
 
