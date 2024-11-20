@@ -8,6 +8,8 @@ models:
     columns:
     - name: PK_CLIENTE
       description: Chave primária do cliente.
+      data_tests:
+          - unique
 
     - name: NOME_CLIENTE
       description: Nome completo do cliente.

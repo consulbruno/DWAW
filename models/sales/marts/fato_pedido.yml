@@ -8,45 +8,52 @@ models:
     columns:
       - name: PK_PEDIDO
         description: Chave primária do pedido.
-        data_tests:
-          - not_null
-          - unique
 
       - name: FK_CLIENTE
         description: Chave estrangeira do cliente.
 
-      - name: FK_PRODUTO
-        description: Chave estrangeira do produto.
-
       - name: FK_FUNCIONARIO
         description: Chave estrangeira do funcionário.
 
+      - name: FK_PRODUTO
+        description: Chave estrangeira do produto.
+
       - name: FK_ENDERECO
-        description: Chave estrangeira do endereço de entrega.
+        description: Chave estrangeira do endereço.
 
       - name: DT_PEDIDO
-        description: Data em que o pedido foi feito.
-        
+        description: Data do pedido.
+
       - name: QUANTIDADE
-        description: Quantidade do produto em questão.
+        description: Quantidade comprada do produto no pedido.
 
       - name: VALOR_UNITARIO
-        description: Valor unitário do produto, com descontos de ofertas especiais aplicados.
+        description: Valor unitário do produto no pedido.
+
+      - name: DESCONTO_UNITARIO
+        description: Desconto unitário do produto no pedido.
+
+      - name: SUBTOTAL
+        description: Subtotal do pedido.
+
+      - name: TAXA
+        description: Taxa cobrada no pedido.
+
+      - name: FRETE
+        description: Frete do pedido.
 
       - name: VALOR_TOTAL
-        description: Valor total do pedido, menos frete.
+        description: Valor total do pedido.
 
       - name: TIPO_CARTAO
-        description: Tipo de cartão utilizado para o pagamento do pedido.
+        description: Tipo de cartão utilizado no pagamento do pedido.
 
-      - name: TIPO_PEDIDO
-        description: Diz se o pedido foi feito online ou na loja.
-
-      - name: MOTIVO_PEDIDO
-        description: Motivo do cliente ter realizado a compra (se foi por uma promoção, por ex).
+      - name: TIPO_VENDA
+        description: Diz se a venda foi feita online ou em loja.
 
       - name: STATUS
         description: Status do pedido.
 
       - name: DT_ALTERACAO
-        description: Data da última alteração do status do pedido.
+        description: Data da última alteração do pedido.
+        

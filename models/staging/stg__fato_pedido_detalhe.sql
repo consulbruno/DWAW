@@ -15,14 +15,8 @@ with
              , cast (UNITPRICE as float) as VALOR_UNITARIO
              , cast (UNITPRICEDISCOUNT as float) as DESCONTO_UNITARIO
 --           , cast (ROWGUID as varchar) as
-             , cast (max (MODIFIEDDATE) as date) as DT_ALTERACAO
+             , cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_pedido_detalhe
-        group by SALESORDERID
-               , SALESORDERDETAILID
-               , ORDERQTY
-               , PRODUCTID
-               , UNITPRICE
-               , UNITPRICEDISCOUNT
     )
 
 select *

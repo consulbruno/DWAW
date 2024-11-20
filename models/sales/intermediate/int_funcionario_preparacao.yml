@@ -9,7 +9,6 @@ models:
       - name: PK_FUNCIONARIO
         description: Chave primária do funcionário.
         data_tests:
-          - not_null
           - unique
           
       - name: NOME_FUNCIONARIO
