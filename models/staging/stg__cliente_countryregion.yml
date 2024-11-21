@@ -9,3 +9,8 @@ sources:
       tables:
         - name: CountryRegion
           description: Tabela que liga a PK de países com seus nomes.
+          columns:
+          - name: CountryRegionCode
+            data_tests:
+              - unique
+              - not_null

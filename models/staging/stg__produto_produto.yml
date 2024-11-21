@@ -9,3 +9,9 @@ sources:
       tables:
         - name: Product
           description: Tabela com informações dos produtos da AW.
+
+          columns:
+            - name: ProductId
+              data_tests:
+                - not_null
+                - unique

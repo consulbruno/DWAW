@@ -13,3 +13,6 @@ sources:
             - name: BusinessEntityID
               data_tests:
                 - not_null
+            - name: DepartmentId
+              data_tests:
+                - not_null

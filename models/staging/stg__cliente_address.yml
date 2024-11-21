@@ -9,5 +9,3 @@ sources:
       tables:
         - name: Address
           description: Tabela de endereços dos clientes e funcionários.
-          columns:
-          - name: AddressId

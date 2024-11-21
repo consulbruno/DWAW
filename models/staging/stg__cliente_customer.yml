@@ -13,6 +13,7 @@ sources:
             - name: CustomerID
               data_tests:
                 - unique
+                - not_null
               
             - name: PersonID
               data_tests:

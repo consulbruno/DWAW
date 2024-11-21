@@ -19,11 +19,6 @@ with
         from {{ ref('stg__produto_modelo') }}
     )
 
-    , pedido_detalhe as (
-        select *
-        from {{ ref('stg__fato_pedido_detalhe') }}
-    )
-
     , produto_categoria as (
         select subcategoria.PK_SUBTIPO_PRODUTO
              , categoria.TIPO_PRODUTO as TIPO_PRODUTO

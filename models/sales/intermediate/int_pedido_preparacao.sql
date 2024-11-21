@@ -9,11 +9,6 @@ with
         from {{ ref('stg__fato_pedido_cartao') }}
     )
 
-    , produto as (
-        select *
-        from {{ ref('int_produto_preparacao') }}
-    )
-
     , pedido_detalhe as (
         select *
         from {{ ref('stg__fato_pedido_detalhe') }}

@@ -9,3 +9,9 @@ sources:
       tables:
         - name: SalesReason
           description: Tabela com as informações dos motivos de venda.
+        
+          columns:
+            - name: SalesReasonId
+              data_tests:
+                - not_null
+                - unique

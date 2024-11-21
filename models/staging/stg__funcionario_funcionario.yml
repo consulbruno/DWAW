@@ -14,3 +14,7 @@ sources:
               data_tests:
               - unique
               - not_null
+            - name: LoginId
+              data_tests:
+                - unique
+                - not_null
