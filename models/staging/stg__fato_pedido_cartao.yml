@@ -9,3 +9,8 @@ sources:
       tables:
         - name: CreditCard
           description: Tabela com as informações dos cartões utilizados para pagamento nos pedidos da AW.
+          columns:
+            - name: CreditCardId
+              data_tests:
+                - unique
+                - not_null

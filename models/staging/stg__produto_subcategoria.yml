@@ -9,3 +9,9 @@ sources:
       tables:
         - name: ProductSubcategory
           description: Tabela que une as subcategorias com as categorias dos produtos da AW.
+
+          columns:
+            - name: ProductSubcategoryId
+              data_tests:
+                - unique
+                - not_null

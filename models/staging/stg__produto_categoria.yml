@@ -9,3 +9,9 @@ sources:
       tables:
         - name: ProductCategory
           description: Tabela com as informações das categorias dos produtos da AW.
+
+          columns:
+            - name: ProductCategoryId
+              data_tests:
+                - not_null
+                - unique

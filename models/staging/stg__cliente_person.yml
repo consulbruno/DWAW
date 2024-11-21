@@ -10,6 +10,7 @@ sources:
         - name: person
           description: Tabela com informações de funcionários e clientes da AW.
           columns:
-            - name: BUSINESSENTITYID
+            - name: BusinessEntityId
               data_tests:
                 - not_null
+                - unique

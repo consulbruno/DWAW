@@ -9,3 +9,12 @@ sources:
       tables:
         - name: SalesOrderHeaderSalesReason
           description: Tabela que liga a PK_PEDIDO com a FK_MOTIVO_PEDIDO.
+
+          columns:
+            - name: SalesOrderId
+              data_tests:
+                - not_null
+            
+            - name: SalesReasonId
+              data_tests:
+                - not_null

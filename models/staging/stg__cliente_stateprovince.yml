@@ -9,3 +9,8 @@ sources:
       tables:
         - name: StateProvince
           description: Tabela que liga a PK de estados com a FK de países.
+          columns:
+            - name: StateProvinceId
+              data_tests:
+                - unique
+                - not_null
