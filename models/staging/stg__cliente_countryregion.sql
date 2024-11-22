@@ -10,8 +10,6 @@ with
              , cast (NAME as varchar) as NOME_PAIS
              , cast (MODIFIEDDATE as date) as DT_ALTERACAO
         from fonte_countryregion
-        group by COUNTRYREGIONCODE
-               , NAME
     )
 
 select *
